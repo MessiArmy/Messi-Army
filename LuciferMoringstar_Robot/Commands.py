@@ -84,7 +84,7 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ Deploy Now 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('🖥️➕ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭᑭ ➕', url='https://t.me/SKM_Movis_World_Bot?startgroup=true')
                     ],
                     [
                         InlineKeyboardButton('🔍 Search again 🔎', switch_inline_query_current_chat='')
@@ -125,17 +125,21 @@ async def start(bot, message):
                             ),
                         InlineKeyboardButton
                             (
-                                "🤖More Botz", url="https://t.me/MT_Botz"
+                                "Join Now", url="https://t.me/SKMMovieWorld"
+                            ).
+                        InlineKeyboardButton
+                            (
+                                "➕ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭᑭ ➕", url="https://t.me/SKM_Movis_World_Bot?startgroup=true"
                             )
                     ],
                     [
                         InlineKeyboardButton
                             (
-                                "🤔Help", callback_data="help"
+                                "⛑️ Help", callback_data="help"
                             ),
                         InlineKeyboardButton
                             (
-                                "About🤠", callback_data="about"
+                                "About 💡", callback_data="about"
                             )
                     ]
                 ]
@@ -300,7 +304,7 @@ async def total(bot, message):
     msg = await message.reply("Processing...⏳", quote=True)
     try:
         total = await Media.count_documents()
-        await msg.edit(f'📁 Saved files: {total}')
+        await msg.edit(f'📁 Saved files: {total} 🖕')
     except Exception as e:
         logger.exception('Failed to check total files')
         await msg.edit(f'Error: {e}')
